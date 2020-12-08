@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpDelFlora">
+
+    <TextView
+        android:id="@+id/nama_flora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/image_flora"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/nama_flora"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="105dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nama_flora" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/image_flora"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:id="@+id/judul_kerajaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_flora"
+                android:layout_marginTop="39dp"
+                android:background="@drawable/background_judul"
+                android:paddingLeft="10dp"
+                android:text="Kerajaan"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/isi_kerajaan"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judul_kerajaan"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/judul_divisi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/isi_kerajaan"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/background_judul"
+                android:paddingLeft="10dp"
+                android:text="Divisi"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/isi_divisi"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judul_divisi"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/judul_kelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/isi_divisi"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/background_judul"
+                android:paddingLeft="10dp"
+                android:text="Kelas"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/isi_kelas"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judul_kelas"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/judul_famili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/isi_kelas"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/background_judul"
+                android:paddingLeft="10dp"
+                android:text="Famili"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/isi_famili"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judul_famili"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/judul_karakteristik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/isi_famili"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/background_judul"
+                android:paddingLeft="10dp"
+                android:text="Karakteristik"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/isi_karakteristik"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/judul_karakteristik"
+                android:layout_marginTop="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/isi_karakteristik">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/btn_delet_flora"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btnhapus"
+                        android:src="@drawable/ic_delete"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:onClick="edit_flora"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/btnedit"
+                        android:src="@drawable/ic_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/btn_delet_flora"
+                        tools:layout_editor_absoluteY="0dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
